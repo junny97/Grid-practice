@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid응용</title>
+    <style>
+
+        .container{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 2fr 1fr 1fr;
+          grid-template-areas:
+		"header header header"
+		"   a    main    b   "
+		"   .     .      .   "  /*자체 공백처리를 위한 */
+		"footer footer footer";
+
+        width: 500px;
+        height: 200px;
+}
+
+        
+        .header{
+            background: skyblue;
+            grid-area: header;
+           
+        }
+        .a{
+            background: lightgreen;
+            grid-area: a;
+            
+        }
+        .main{
+            background: rosybrown;
+            grid-area: main;
+            
+        }
+        .b {
+            background: chocolate;
+            grid-area: b;
+        }
+        .footer{
+            background: lightcoral;
+            grid-area: footer;
+          
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="a">a</div>
+        <div class="main">main</div>
+        <div class="b">b</div>
+        <div class="footer">footer</div>
+    </div>
+  
+  <script src=""></script>
+</body>
+</html>
